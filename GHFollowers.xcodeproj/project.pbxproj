@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F760EFDA2A4C410700BF9756 /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F760EFD92A4C410700BF9756 /* FollowersListVC.swift */; };
 		F7669B6F2A4C16F0003D6C7A /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7669B6E2A4C16F0003D6C7A /* GFButton.swift */; };
 		F7669B712A4C1A0F003D6C7A /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7669B702A4C1A0F003D6C7A /* GFTextField.swift */; };
 		F7D07CED2A4B7E7E006E017E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D07CEC2A4B7E7E006E017E /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F760EFD92A4C410700BF9756 /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		F7669B6E2A4C16F0003D6C7A /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		F7669B702A4C1A0F003D6C7A /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		F7D07CE92A4B7E7E006E017E /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 				F7D07CEC2A4B7E7E006E017E /* AppDelegate.swift */,
 				F7D07CEE2A4B7E7E006E017E /* SceneDelegate.swift */,
 				F7D07D002A4B844A006E017E /* SearchVC.swift */,
+				F760EFD92A4C410700BF9756 /* FollowersListVC.swift */,
 				F7D07D022A4B84A3006E017E /* FavouritesVC.swift */,
 				F7669B6E2A4C16F0003D6C7A /* GFButton.swift */,
 				F7669B702A4C1A0F003D6C7A /* GFTextField.swift */,
@@ -145,6 +148,7 @@
 			files = (
 				F7669B712A4C1A0F003D6C7A /* GFTextField.swift in Sources */,
 				F7D07D012A4B844A006E017E /* SearchVC.swift in Sources */,
+				F760EFDA2A4C410700BF9756 /* FollowersListVC.swift in Sources */,
 				F7669B6F2A4C16F0003D6C7A /* GFButton.swift in Sources */,
 				F7D07CED2A4B7E7E006E017E /* AppDelegate.swift in Sources */,
 				F7D07D032A4B84A3006E017E /* FavouritesVC.swift in Sources */,
