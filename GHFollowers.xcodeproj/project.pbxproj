@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F704B8E42A5A7E9B000A6F28 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F704B8E32A5A7E9B000A6F28 /* ErrorMessage.swift */; };
 		F70EA7402A59F0F700D4FBBE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70EA73F2A59F0F700D4FBBE /* User.swift */; };
 		F70EA7422A59F10100D4FBBE /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70EA7412A59F10100D4FBBE /* Follower.swift */; };
 		F70EA7452A59F18000D4FBBE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70EA7442A59F18000D4FBBE /* NetworkManager.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F704B8E32A5A7E9B000A6F28 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		F70EA73F2A59F0F700D4FBBE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F70EA7412A59F10100D4FBBE /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		F70EA7442A59F18000D4FBBE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F704B8E22A5A7E85000A6F28 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F704B8E32A5A7E9B000A6F28 /* ErrorMessage.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F70EA73E2A59F0BE00D4FBBE /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		F7D07CEB2A4B7E7E006E017E /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				F704B8E22A5A7E85000A6F28 /* Utilities */,
 				F70EA73E2A59F0BE00D4FBBE /* Models */,
 				F77C95D12A5357DB004B2A2F /* Support */,
 				F77C95CE2A535705004B2A2F /* Screens */,
@@ -222,6 +233,7 @@
 				F7669B6F2A4C16F0003D6C7A /* GFButton.swift in Sources */,
 				F76C9A9C2A4D77EA00584E7F /* GFAlertVC.swift in Sources */,
 				F76C9A9A2A4D76BF00584E7F /* GFBodyLabel.swift in Sources */,
+				F704B8E42A5A7E9B000A6F28 /* ErrorMessage.swift in Sources */,
 				F70EA7422A59F10100D4FBBE /* Follower.swift in Sources */,
 				F76C9A982A4D71CD00584E7F /* GFTitleLabel.swift in Sources */,
 				F70EA7402A59F0F700D4FBBE /* User.swift in Sources */,
