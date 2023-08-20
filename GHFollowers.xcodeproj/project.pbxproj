@@ -27,6 +27,7 @@
 		F7D07D032A4B84A3006E017E /* FavouritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D07D022A4B84A3006E017E /* FavouritesVC.swift */; };
 		F7D1CEBD2A5AB1C400F99E0A /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1CEBC2A5AB1C400F99E0A /* FollowerCell.swift */; };
 		F7D1CEBF2A5AB27000F99E0A /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1CEBE2A5AB27000F99E0A /* GFAvatarImageView.swift */; };
+		F7DA27C32A920E60007E1D45 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DA27C22A920E60007E1D45 /* GFEmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F7D07D022A4B84A3006E017E /* FavouritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesVC.swift; sourceTree = "<group>"; };
 		F7D1CEBC2A5AB1C400F99E0A /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		F7D1CEBE2A5AB27000F99E0A /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		F7DA27C22A920E60007E1D45 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +106,13 @@
 		F77C95CF2A535740004B2A2F /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7DA27C12A920E14007E1D45 /* Labels */,
+				F7DA27C02A920DD2007E1D45 /* ViewControllers */,
+				F7DA27BF2A920DBC007E1D45 /* ImageViews */,
+				F7DA27BE2A920DB0007E1D45 /* TextFields */,
+				F7DA27BD2A920DA3007E1D45 /* Buttons */,
+				F7DA27BC2A920D99007E1D45 /* Views */,
 				F7D1CEBB2A5AB18400F99E0A /* Cells */,
-				F7669B6E2A4C16F0003D6C7A /* GFButton.swift */,
-				F7669B702A4C1A0F003D6C7A /* GFTextField.swift */,
-				F76C9A972A4D71CD00584E7F /* GFTitleLabel.swift */,
-				F76C9A992A4D76BF00584E7F /* GFBodyLabel.swift */,
-				F76C9A9B2A4D77EA00584E7F /* GFAlertVC.swift */,
-				F7D1CEBE2A5AB27000F99E0A /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -171,6 +173,55 @@
 				F7D1CEBC2A5AB1C400F99E0A /* FollowerCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F7DA27BC2A920D99007E1D45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7DA27C22A920E60007E1D45 /* GFEmptyStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7DA27BD2A920DA3007E1D45 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F7669B6E2A4C16F0003D6C7A /* GFButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F7DA27BE2A920DB0007E1D45 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				F7669B702A4C1A0F003D6C7A /* GFTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		F7DA27BF2A920DBC007E1D45 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1CEBE2A5AB27000F99E0A /* GFAvatarImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		F7DA27C02A920DD2007E1D45 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F76C9A9B2A4D77EA00584E7F /* GFAlertVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F7DA27C12A920E14007E1D45 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				F76C9A972A4D71CD00584E7F /* GFTitleLabel.swift */,
+				F76C9A992A4D76BF00584E7F /* GFBodyLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +308,7 @@
 				F70EA7422A59F10100D4FBBE /* Follower.swift in Sources */,
 				F76C9A982A4D71CD00584E7F /* GFTitleLabel.swift in Sources */,
 				F70EA7402A59F0F700D4FBBE /* User.swift in Sources */,
+				F7DA27C32A920E60007E1D45 /* GFEmptyStateView.swift in Sources */,
 				F70EA7452A59F18000D4FBBE /* NetworkManager.swift in Sources */,
 				F7D07CED2A4B7E7E006E017E /* AppDelegate.swift in Sources */,
 				F7D07D032A4B84A3006E017E /* FavouritesVC.swift in Sources */,
