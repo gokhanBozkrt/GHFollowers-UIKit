@@ -61,7 +61,6 @@ class UserInfoVC: UIViewController {
         self.add(childVC: repoItemVC,to: self.itemViewOne)
         self.add(childVC: followersItemVC,to: self.itemViewTwo)
         self.dateLabel.text = user.createdAt.convertToDisplayFormat()
-        print(user.createdAt)
     }
     
     func add(childVC: UIViewController, to containerView: UIView) {
