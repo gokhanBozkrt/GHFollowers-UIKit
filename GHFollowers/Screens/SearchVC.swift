@@ -44,10 +44,10 @@ class SearchVC: UIViewController {
            presentGFAlertOnMainThread(title: "Empty Username", message: "Please Enter a username so that we could find a user for you 😅😅", buttonTitle: "OK")
            return
        }
-       usernameTextField.resignFirstResponder()
-       
+     
        let followerListVC = FollowersListVC(userName: usernameTextField.text!)
        navigationController?.pushViewController(followerListVC, animated: true)
+       usernameTextField.resignFirstResponder()
        
     }
     
