@@ -8,10 +8,8 @@
 import UIKit
 
 protocol UserInfoVCDelegate: AnyObject {
-    func didTapGitHubProfile(for user: User)
-    func didTapGetFollowers(for user: User)
+    func didRequestFollowers(for userName: String)
 }
-
 
 class UserInfoVC: UIViewController {
 
@@ -21,7 +19,7 @@ class UserInfoVC: UIViewController {
     let dateLabel = GFBodyLabel(textAlignment: .center)
     let itemViewTwo = UIView()
     
-    weak var delegate: FollowerListVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
     
     
     override func viewDidLoad() {
@@ -71,12 +69,7 @@ class UserInfoVC: UIViewController {
     }
     
     func layoutUI() {
-        view.addSubview(headerView)
-        view.addSubview(itemViewOne)
-        view.addSubview(itemViewTwo)
-        view.addSubview(dateLabel)
-        
-
+        view.addSubviews(headerView,itemViewOne,itemViewTwo,dateLabel)
         
         itemViewOne.translatesAutoresizingMaskIntoConstraints = false
         itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
@@ -89,7 +82,7 @@ class UserInfoVC: UIViewController {
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: -padding),
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: padding),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -padding),
-            headerView.heightAnchor.constraint(equalToConstant: 180),
+            headerView.heightAnchor.constraint(equalToConstant: 210),
             
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: padding),
@@ -104,8 +97,7 @@ class UserInfoVC: UIViewController {
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
             dateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: padding),
             dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18)
-            
+            dateLabel.heightAnchor.constraint(equalToConstant: 50)
             
         ])
         
@@ -116,7 +108,7 @@ class UserInfoVC: UIViewController {
     }
 }
 
-extension UserInfoVC: UserInfoVCDelegate {
+extension UserInfoVC: ItemInfoVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             presentGFAlertOnMainThread(title: "Invalid Url", message: "No url for this user", buttonTitle: "Ok")

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D974D7C2B382BF700FACD4B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D974D7B2B382BF700FACD4B /* PersistenceManager.swift */; };
 		7DC4C7192B387D6300C57D17 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4C7182B387D6300C57D17 /* FavouriteCell.swift */; };
+		7DC946232B54524B0083A9FE /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC946222B54524B0083A9FE /* UIView+Extention.swift */; };
 		7DD6D8A52B53E2840088AF6E /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D8A42B53E2840088AF6E /* GFTabBarController.swift */; };
 		7DD6D8A72B53F5030088AF6E /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D8A62B53F5030088AF6E /* GFAlertContainerView.swift */; };
 		F70EA7402A59F0F700D4FBBE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70EA73F2A59F0F700D4FBBE /* User.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		7D974D7B2B382BF700FACD4B /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		7DC4C7182B387D6300C57D17 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
+		7DC946222B54524B0083A9FE /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		7DD6D8A42B53E2840088AF6E /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		7DD6D8A62B53F5030088AF6E /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		F70EA73F2A59F0F700D4FBBE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				F76C9A9D2A4D8AEA00584E7F /* UIViewController+ Extention.swift */,
+				7DC946222B54524B0083A9FE /* UIView+Extention.swift */,
 				F79EE0DE2B0A998A009CFA32 /* Date+Extention.swift */,
 				F79EE0E02B0A99EF009CFA32 /* String+Extention.swift */,
 			);
@@ -371,6 +374,7 @@
 				7DD6D8A52B53E2840088AF6E /* GFTabBarController.swift in Sources */,
 				F70EA7422A59F10100D4FBBE /* Follower.swift in Sources */,
 				F79FE7E52AA4EBB7008A97DF /* GFUserInfoHeaderVC.swift in Sources */,
+				7DC946232B54524B0083A9FE /* UIView+Extention.swift in Sources */,
 				F76C9A982A4D71CD00584E7F /* GFTitleLabel.swift in Sources */,
 				F70EA7402A59F0F700D4FBBE /* User.swift in Sources */,
 				7DD6D8A72B53F5030088AF6E /* GFAlertContainerView.swift in Sources */,
