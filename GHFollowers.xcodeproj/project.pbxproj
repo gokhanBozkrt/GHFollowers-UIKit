@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D914DBB2B9C52A200698AEF /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D914DBA2B9C52A200698AEF /* UITableView+Extension.swift */; };
 		7D974D7C2B382BF700FACD4B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D974D7B2B382BF700FACD4B /* PersistenceManager.swift */; };
 		7DC4C7192B387D6300C57D17 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4C7182B387D6300C57D17 /* FavouriteCell.swift */; };
 		7DC946232B54524B0083A9FE /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC946222B54524B0083A9FE /* UIView+Extention.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D914DBA2B9C52A200698AEF /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7D974D7B2B382BF700FACD4B /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		7DC4C7182B387D6300C57D17 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
 		7DC946222B54524B0083A9FE /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				7DC946222B54524B0083A9FE /* UIView+Extention.swift */,
 				F79EE0DE2B0A998A009CFA32 /* Date+Extention.swift */,
 				F79EE0E02B0A99EF009CFA32 /* String+Extention.swift */,
+				7D914DBA2B9C52A200698AEF /* UITableView+Extension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			files = (
 				7DC4C7192B387D6300C57D17 /* FavouriteCell.swift in Sources */,
 				F7669B712A4C1A0F003D6C7A /* GFTextField.swift in Sources */,
+				7D914DBB2B9C52A200698AEF /* UITableView+Extension.swift in Sources */,
 				F7D07D012A4B844A006E017E /* SearchVC.swift in Sources */,
 				F760EFDA2A4C410700BF9756 /* FollowersListVC.swift in Sources */,
 				F76C9A9E2A4D8AEA00584E7F /* UIViewController+ Extention.swift in Sources */,

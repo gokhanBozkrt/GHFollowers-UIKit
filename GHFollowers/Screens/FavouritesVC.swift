@@ -33,6 +33,7 @@ class FavouritesVC: UIViewController {
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.rowHeight = 80
+        tableView.removeExcessCells()
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -82,13 +83,13 @@ extension FavouritesVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard  editingStyle == .delete else { return }
-        let favouriteItem = favourites[indexPath.row]
-        favourites.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .left)
-        
-        PersistenceManager.updateWith(favourite: favouriteItem, actionType: .remove) { [weak self] error in
+        PersistenceManager.updateWith(favourite: favourites[indexPath.row], actionType: .remove) { [weak self] error in
             guard let self = self else { return }
-            guard let error = error else { return }
+            guard let error = error else {
+                favourites.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .left)
+                return
+            }
             self.presentGFAlertOnMainThread(title: "Error Happened", message: error.rawValue, buttonTitle: "Ok")
             
         }
