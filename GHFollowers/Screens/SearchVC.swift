@@ -11,7 +11,7 @@ class SearchVC: UIViewController {
 
     let logoImageView = UIImageView()
     let usernameTextField = GFTextField()
-    let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+    let callToActionButton = GFButton(color: .systemGreen, title: "Get Followers", systemImageName: "magnifyingglass")
     var logoImageViewTopConstraint: NSLayoutConstraint!
     
     var isUserNameValid: Bool {
