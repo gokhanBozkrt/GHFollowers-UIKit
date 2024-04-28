@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1F1F1E2BDE7AA5001E2EA2 /* FollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1F1F1D2BDE7AA5001E2EA2 /* FollowerView.swift */; };
 		7D914DBB2B9C52A200698AEF /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D914DBA2B9C52A200698AEF /* UITableView+Extension.swift */; };
 		7D974D7C2B382BF700FACD4B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D974D7B2B382BF700FACD4B /* PersistenceManager.swift */; };
 		7DC4C7192B387D6300C57D17 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4C7182B387D6300C57D17 /* FavouriteCell.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D1F1F1D2BDE7AA5001E2EA2 /* FollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerView.swift; sourceTree = "<group>"; };
 		7D914DBA2B9C52A200698AEF /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7D974D7B2B382BF700FACD4B /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		7DC4C7182B387D6300C57D17 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
@@ -99,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D1F1F1C2BDE7A7C001E2EA2 /* FollowerCell */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1CEBC2A5AB1C400F99E0A /* FollowerCell.swift */,
+				7D1F1F1D2BDE7AA5001E2EA2 /* FollowerView.swift */,
+			);
+			path = FollowerCell;
+			sourceTree = "<group>";
+		};
 		7DD6D8A32B53E2360088AF6E /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +239,7 @@
 		F7D1CEBB2A5AB18400F99E0A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F7D1CEBC2A5AB1C400F99E0A /* FollowerCell.swift */,
+				7D1F1F1C2BDE7A7C001E2EA2 /* FollowerCell */,
 				7DC4C7182B387D6300C57D17 /* FavouriteCell.swift */,
 			);
 			path = Cells;
@@ -388,6 +399,7 @@
 				F70EA7452A59F18000D4FBBE /* NetworkManager.swift in Sources */,
 				F7D07CED2A4B7E7E006E017E /* AppDelegate.swift in Sources */,
 				F7D07D032A4B84A3006E017E /* FavouritesVC.swift in Sources */,
+				7D1F1F1E2BDE7AA5001E2EA2 /* FollowerView.swift in Sources */,
 				F7819A5A2AE5B644009566B1 /* GFItemFollowerVC.swift in Sources */,
 				F7D07CEF2A4B7E7E006E017E /* SceneDelegate.swift in Sources */,
 				F7BAF7AB2A9B4DB700E69754 /* UserInfoVC.swift in Sources */,
@@ -540,6 +552,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,6 +580,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
