@@ -47,8 +47,16 @@ class FavouritesVC: UIViewController {
             switch result {
             case .success(let retrievedFavourites):
                 if retrievedFavourites.isEmpty {
-                    showEmptyStateView(with: "No Favourites", in: self.view)
+                    if #available(iOS 17.0, *) {
+                        setNeedsUpdateContentUnavailableConfiguration()
+                    } else {
+                        showEmptyStateView(with: "No Favourites", in: self.view)
+                    }
                 } else {
+                    if #available(iOS 17.0, *) {
+                        
+                        contentUnavailableConfiguration = nil
+                    }
                     self.favourites = retrievedFavourites
                     Task { @MainActor in
                         self.tableView.reloadData()
@@ -61,6 +69,21 @@ class FavouritesVC: UIViewController {
             }
         }
     }
+    
+    @available(iOS 17.0, *)
+    override func updateContentUnavailableConfiguration(using state: UIContentUnavailableConfigurationState) {
+        
+        if favourites.isEmpty  {
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = .init(systemName: "star")
+            config.text = "No favourites"
+            config.secondaryText = "Add a favourite"
+            contentUnavailableConfiguration = config
+        } else {
+            contentUnavailableConfiguration = nil
+        }
+    }
+    
 }
 
 extension FavouritesVC: UITableViewDelegate,UITableViewDataSource {
@@ -88,6 +111,16 @@ extension FavouritesVC: UITableViewDelegate,UITableViewDataSource {
             guard let error = error else {
                 favourites.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .left)
+                
+                if favourites.isEmpty {
+                    
+                    if #available(iOS 17.0, *) {
+                        setNeedsUpdateContentUnavailableConfiguration()
+                    } else {
+                        showEmptyStateView(with: "No Favourites", in: self.view)
+                    }
+                }
+                
                 return
             }
             self.presentGFAlertOnMainThread(title: "Error Happened", message: error.rawValue, buttonTitle: "Ok")

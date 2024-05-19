@@ -50,6 +50,22 @@ class FollowersListVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    @available(iOS 17.0, *)
+    override func updateContentUnavailableConfiguration(using state: UIContentUnavailableConfigurationState) {
+        
+        if followers.isEmpty && !isLoadingMoreFollowers {
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = .init(systemName: "person.slash")
+            config.text = "No followers"
+            config.secondaryText = "User has no followers"
+            contentUnavailableConfiguration = config
+        } else if isSearching && filteredFollowers.isEmpty {
+            contentUnavailableConfiguration = UIContentUnavailableConfiguration.search()
+        } else {
+            contentUnavailableConfiguration = nil
+        }
+    }
+    
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -102,25 +118,40 @@ class FollowersListVC: UIViewController {
     }
     
     func getFollowers(userName: String, page: Int) {
+        isLoadingMoreFollowers = true
                showLoadingView()
                NetworkManager.shared.getFollowers(for: userName, page: page) { [weak self] (result) in
                    guard let self = self else { return }
                    self.dismissLoadingView()
+                   isLoadingMoreFollowers = false
                    switch result {
                    case .success(let followers):
                        if followers.count < 100 {  self.hasMoreFollowers = false }
-                       print("Followers.count = \(followers.count)")
                        self.followers.append(contentsOf: followers)
                        
                        if self.followers.isEmpty {
-                           let message = "This user does not hane any followers.Go follow them 😅"
                            DispatchQueue.main.async {
-                               self.showEmptyStateView(with: message, in: self.view)
-                               return
+                           if #available(iOS 17.0, *) {
+                               self.setNeedsUpdateContentUnavailableConfiguration()
+                           } else {
+                               let message = "This user does not hane any followers.Go follow them 😅"
+                             
+                                   self.showEmptyStateView(with: message, in: self.view)
+                                   
+                                   return
+                               }
+                           }
+                       } else {
+                           if #available(iOS 17.0, *) {
+                               if contentUnavailableConfiguration != nil  {
+                                   contentUnavailableConfiguration = nil
+                               }
+                              
+                               self.updateData(on: self.followers)
                            }
                        }
                        
-                       self.updateData(on: self.followers)
+                      
                    case .failure(let error):
                        self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
                    }
@@ -187,6 +218,10 @@ extension FollowersListVC: UISearchResultsUpdating {
             filteredFollowers.removeAll(keepingCapacity: false)
             updateData(on: followers)
             isSearching = false
+            if #available(iOS 17.0, *) {
+                guard contentUnavailableConfiguration != nil else { return }
+                contentUnavailableConfiguration = nil
+            }
             return
         }
         isSearching = true
@@ -194,7 +229,9 @@ extension FollowersListVC: UISearchResultsUpdating {
             follower.login.lowercased().contains(filter.lowercased())
         })
         updateData(on: filteredFollowers)
-        
+        if #available(iOS 17.0, *) {
+            setNeedsUpdateContentUnavailableConfiguration()
+        }
     }
 }
 
